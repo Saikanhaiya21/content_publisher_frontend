@@ -42,8 +42,6 @@ export default function Login() {
       <div className="auth-card">
         <h2 className="auth-title">Welcome Back</h2>
 
-        <ErrorBanner message={error ?? undefined} />
-
         <form onSubmit={submit} className="auth-form">
           <input
             value={email}
@@ -66,11 +64,13 @@ export default function Login() {
             <p className="auth-error">{fieldErrors.password}</p>
           )}
 
+          <ErrorBanner message={error ?? undefined} />
+
           <button type="submit" className="auth-btn" disabled={loading}>
             {loading ? <Loading size={16} /> : "Login"}
           </button>
         </form>
-
+        
         <p className="auth-switch">
           Don’t have an account? <Link to="/signup">Create one</Link>
         </p>

@@ -51,8 +51,6 @@ export default function Signup() {
       <div className="auth-card">
         <h2 className="auth-title">Create Your Account</h2>
 
-        <ErrorBanner message={error ?? undefined} />
-
         <form onSubmit={submit} className="auth-form">
           <input
             value={email}
@@ -85,7 +83,7 @@ export default function Signup() {
           {fieldErrors.confirm && (
             <p className="auth-error">{fieldErrors.confirm}</p>
           )}
-
+          <ErrorBanner message={error ?? undefined} />
           <button type="submit" className="auth-btn" disabled={loading}>
             {loading ? <Loading size={16} /> : "Create Account"}
           </button>
