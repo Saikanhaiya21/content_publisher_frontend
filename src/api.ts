@@ -56,7 +56,7 @@ export const publicationsApi = {
 
   bulkDelete: (ids: (number | string)[]) =>
     request('/publications/bulk_destroy', {
-      method: 'POST',
+      method: 'DELETE',
       body: JSON.stringify({ ids }),
     }),
 
@@ -66,7 +66,6 @@ export const publicationsApi = {
       body: JSON.stringify({ ids }),
     }),
 
-  /** ⭐ NEW: List deleted publications */
   listDeleted: () => request('/publications/deleted'),
 
   // public list of published items
