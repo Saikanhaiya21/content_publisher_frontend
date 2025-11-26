@@ -54,3 +54,8 @@ The app will be available at:
 ```bash
 http://localhost:5174
 ```
+
+**Live Url:**
+```bash
+https://zesty-creponne-b72c5b.netlify.app/login
+```
